@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 119px;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      width: 134px;
+    }
+  }
+  
+ 
+  .links {
+    fill: var(--containerColor);
+  }
+  
+  .links:hover {
+    fill: var(--borderColor);
+    cursor: pointer;
+    scale: 1.1;
+  }
+
+  
+
+  

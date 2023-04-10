@@ -1,0 +1,176 @@
+
+.App-image {
+  width: 100%;
+  max-height: 250px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.App-btn {
+  width: 200px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  top: 125px;
+  font-size: 18px;
+  color:var(--mainTextColor);
+  background-color:var(--greyBgColor);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.App-btn:hover {
+  color:var(--secondaryTextColor);
+  background-color:var(--lineColor);
+  font-size: 20px;
+}
+
+.App-btn-move {
+  top: 175px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--lightGreyColor);
+  position: relative;
+  /* overflow: hidden; */
+}
+
+ul.floating-boxes {
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* The Boxes */
+ul.floating-boxes li {
+  position: absolute;
+  list-style: none;
+  height: 2rem;
+  width: 2rem;
+  background-image: linear-gradient(
+    135deg,
+    rgba(136, 137, 135, 0.45),
+    hsla(263, 64%, 39%, 0.45)
+  );
+  bottom: -170rem;
+  animation: floatingbox 25s linear infinite;
+  z-index: 2;
+}
+ul.floating-boxes li:nth-child(1) {
+  left: 25%;
+  height: 6rem;
+  width: 6rem;
+  animation-delay: 1s;
+  animation-duration: 15s;
+}
+ul.floating-boxes li:nth-child(2) {
+  left: 10%;
+  height: 2rem;
+  width: 2rem;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+ul.floating-boxes li:nth-child(3) {
+  left: 65%;
+  height: 9rem;
+  width: 9rem;
+  animation-delay: 7s;
+  animation-duration: 10s;
+}
+ul.floating-boxes li:nth-child(4) {
+  left: 45%;
+  height: 6rem;
+  width: 6rem;
+  animation-delay: 7s;
+  animation-duration: 20s;
+  background-image: url('./images/microsoft.png');
+  background-size:cover;
+}
+ul.floating-boxes li:nth-child(5) {
+  left: 55%;
+  height: 4.5rem;
+  width: 4.5rem;
+  animation-delay: 10s;
+  animation-duration: 18s;
+}
+ul.floating-boxes li:nth-child(6) {
+  left: 35%;
+  height: 7rem;
+  width: 7rem;
+  animation-delay: 10s;
+  animation-duration: 22s;
+  background-image: url('./images/tesla.png');
+  background-size:cover;
+}
+ul.floating-boxes li:nth-child(7) {
+  left: 15%;
+  height: 11rem;
+  width: 11rem;
+  animation-delay: 11s;
+  animation-duration: 17s;
+  background-image: url('./images/facebook.webp');
+  background-size:cover;
+}
+ul.floating-boxes li:nth-child(8) {
+  left: 75%;
+  height: 10rem;
+  width: 10rem;
+  animation-delay: 11s;
+  animation-duration: 14s;
+  background-image: url('./images/apple.png');
+  background-size:cover;
+}
+ul.floating-boxes li:nth-child(9) {
+  left: 85%;
+  height: 5rem;
+  width: 5rem;
+  animation-delay: 12s;
+  animation-duration: 10s;
+  background-image: url('./images/google.png');
+  background-size:cover;
+}
+ul.floating-boxes li:nth-child(10) {
+  left: 95%;
+  height: 5.5rem;
+  width: 5.5rem;
+  animation-delay: 13s;
+  animation-duration: 25s;
+  background-image: url('./images/amazon.png');
+  background-size:cover;
+}
+
+@keyframes floatingbox {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-135rem) rotate(1080deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+}
