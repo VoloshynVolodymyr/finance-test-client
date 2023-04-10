@@ -17,7 +17,7 @@ function App() {
   function setVisibleTimeoutForm(time) {
     setIsVisibleTimeoutForm(false);
     if (time<0) {
-      toast.error(`New interval less then 5 sec`);
+      toast.error(`New interval less than 5 sec`);
     } else
     toast.success(`New interval added ${time/1000} sec`);
   }
