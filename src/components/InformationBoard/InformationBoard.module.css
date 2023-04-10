@@ -1,6 +1,7 @@
 .informationBoard {
     position: relative;
     margin-top: 20px;
+    min-width: 880px;
 }
 .wrapperUl {
     display: flex;
