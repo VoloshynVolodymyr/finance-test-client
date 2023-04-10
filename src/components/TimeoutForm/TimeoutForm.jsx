@@ -13,11 +13,14 @@ const TimeoutForm = ({ visible, setVisible }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (hours === 0 && minutes === 0 && never === false && seconds < 5)
-      return console.log("You cannot set an interval of less than 5 seconds");
-    const time = !never
-      ? timeConverter(hours, minutes, seconds) * 1000
-      : 86400000;
+    let time = !never
+    ? timeConverter(hours, minutes, seconds) * 1000
+    : 86400000;
+    if (hours === 0 && minutes === 0 && never === false && seconds < 5){
+      time=-1;
+      setVisible(time)
+      return console.log("You cannot set an interval of less than 5 seconds");}
+
     setTimeout(time);
 
     setVisible(time);
